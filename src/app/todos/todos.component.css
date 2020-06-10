@@ -1,0 +1,20 @@
+.check, .star {
+  width: 50px;
+}
+.text {
+  flex: 2;
+}
+.category {
+  flex: 1;
+}
+.star {
+  color: orange;
+  cursor: pointer;
+}
+.done {
+  text-decoration: line-through;
+  opacity: .7;
+}
+.important {
+  background-color: blanchedalmond;
+}

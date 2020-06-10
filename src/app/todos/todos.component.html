@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-between">
+  <a href="#" (click)="removeDone()" class="text-danger ">Удалить завершенные</a>
+  <a href="#" (click)="toogleOnlyImportant()" class="text-muted">{{isOnlyImportant()? 'Скрыть важные':'Показать важные'}}</a>
+</div>
+<div class="text-center text-muted small p-2" *ngIf="getContent().length === 0">
+  Нет записей для вывода
+</div>
+<ul class="list-group-flush">
+  <li *ngFor="let item of getContent()" class="list-group-item d-flex align-items-center"
+  [class.done]="item.done" [class.important]="item.important">
+    <div class="check">
+      <input type="checkbox" [checked]="item.done" (click)="toggleDone(item.id)">
+    </div>
+    <div class="text">
+      {{item.text}}
+    </div>
+    <div class="category text-right text-muted small">
+      {{item.category}}
+    </div>
+    <div class="star text-right" (click)="toogleImportant(item.id)">
+      <i *ngIf="item.important" class="material-icons star">star</i>
+      <i *ngIf="!item.important" class="material-icons star">star_border</i>
+    </div>
+  </li>
+</ul>
