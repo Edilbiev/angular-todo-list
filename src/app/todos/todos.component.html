@@ -1,6 +1,6 @@
-<div class="d-flex justify-content-between">
+<div class="d-flex justify-content-between mb-2">
   <a href="#" (click)="removeDone()" class="text-danger ">Удалить завершенные</a>
-  <a href="#" (click)="toogleOnlyImportant()" class="text-muted">{{isOnlyImportant()? 'Скрыть важные':'Показать важные'}}</a>
+  <a href="#" (click)="toogleOnlyImportant()" class="text-muted">{{isOnlyImportant()? 'Показать все':'Показать важные'}}</a>
 </div>
 <div class="text-center text-muted small p-2" *ngIf="getContent().length === 0">
   Нет записей для вывода

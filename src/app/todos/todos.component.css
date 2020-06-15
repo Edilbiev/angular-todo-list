@@ -1,3 +1,7 @@
+ul {
+  padding: 0px;
+}
+
 .check, .star {
   width: 50px;
 }
